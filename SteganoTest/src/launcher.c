@@ -8,6 +8,7 @@
 #include "encoder.h"
 #include "verbose.h"
 #include "external/argtable3.h"
+#include "version.h"
 
 // Argument	Type On, Off, Multiple On
 struct arg_lit* verbose, * help, * version, * extract;
@@ -16,13 +17,7 @@ struct arg_file* output, * file, * image;
 struct arg_end* end;
 char ProgExecName[] = "stegacito.exe";
 char ProgTitle[] = "Stegacito";
-unsigned char version_number = 1;
-char * version_name[] =
-{
-	"PREDEV",
-	"0.0.1",
-	"0.0.2"
-};
+
 int main(int argc, char* argv[])
 {
 	void* argtable[] =
@@ -42,7 +37,7 @@ int main(int argc, char* argv[])
 
 	if (version->count > 0)
 	{
-		printf("Version : %s\n", version_name[version_number]);
+		printf("Version : %s\n", GetVersionName());
 	}
 
 	// Show Help if needed

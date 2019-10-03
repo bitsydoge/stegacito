@@ -23,7 +23,7 @@ Image* ImageLoad(const char* path_to_file)
 	}
 
 	VERBOSE_ON printf("Loaded image with a width of %dpx, a height of %dpx and %d channels\n", my_image->width, my_image->height, my_image->channels);
-	VERBOSE_ON printf("You can load a file with a maximum size of %d bytes\n", my_image->width * my_image->height - HEADER_SIZE_IN_BYTES_64);
+	VERBOSE_ON printf("You can load a file with a maximum size of %d bytes\n", my_image->width * my_image->height - HEADER_SIZE_IN_BYTES_32);
 	return my_image;
 }
 

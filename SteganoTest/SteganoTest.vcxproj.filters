@@ -57,6 +57,9 @@
     <ClInclude Include="src\external\stb_image_write.h">
       <Filter>Source Files\external</Filter>
     </ClInclude>
+    <ClInclude Include="src\version.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\bitmask.c">
@@ -85,6 +88,12 @@
     </ClCompile>
     <ClCompile Include="src\external\argtable3.c">
       <Filter>Source Files\external</Filter>
+    </ClCompile>
+    <ClCompile Include="src\header.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\version.c">
+      <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

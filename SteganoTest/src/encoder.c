@@ -20,9 +20,11 @@ int encoder_main(struct arg_file * file, struct arg_file * image, struct arg_fil
 	// Load File
 	File* my_file = FileLoad(file->filename[0], "r");
 
+	Header my_header = HeaderCreate(my_file->size, file->basename[0]);
+
 	// --------------------------------- //
 	// Check if it can be added in Image
-	if (my_file->size <= (HEADER_FILE_SIZE_CONTAINER_TYPE_64)((HEADER_FILE_SIZE_CONTAINER_TYPE_64)my_image->width * (HEADER_FILE_SIZE_CONTAINER_TYPE_64)my_image->height - (HEADER_FILE_SIZE_CONTAINER_TYPE_64)HEADER_SIZE_IN_BYTES_64))
+	if (my_file->size <= my_image->width*my_image->height - HEADER_SIZE_IN_BYTES_32)
 	{
 		VERBOSE_ON printf("The file can be hidden in the image\n");
 	}
@@ -31,17 +33,30 @@ int encoder_main(struct arg_file * file, struct arg_file * image, struct arg_fil
 		printf("Error, the file can't be hidden in the image, it is too heavy\n");
 		exit(3);
 	}
+	// --------------------------------- //
+	// Insert Header
+	VERBOSE_ON printf("Header Encoding ...\n");
+	for(HEADER_FILE_SIZE_CONTAINER_TYPE_32 i = 0; i < HEADER_SIZE_IN_BYTES_32; i++)
+	{
+		// Get Pixel
+		const RGB pixel_original = ImageGetPixelRGB(my_image, i);
+		VERBOSE_ON printf("Original Pixel = (%d,%d,%d)\n", pixel_original.r, pixel_original.g, pixel_original.b);
+	
+		// Encode Pixel
+		const RGB pixel_encoded = Encode(pixel_original, my_header.header[i]);
 
-
+		// Insert in Image Array
+		ImageSetPixelRGB(my_image, i, pixel_encoded);
+	}
+	fseek(my_file->file_handler, 0L, SEEK_SET);
 	// --------------------------------- //
 	// Pixel Encoding
 	VERBOSE_ON printf("Pixel Encoding ...\n");
 	int error_counter = 0;
-	for (int i = 0; i < my_file->size; i++)
+	for (HEADER_FILE_SIZE_CONTAINER_TYPE_32 i = HEADER_SIZE_IN_BYTES_32; i < my_file->size + HEADER_SIZE_IN_BYTES_32; i++)
 	{
-
 		VERBOSE_ON printf("-------------------\n");
-		VERBOSE_ON printf("Pixel Number : %d\n", i);
+		VERBOSE_ON printf("Pixel Number : %d\n", i - HEADER_SIZE_IN_BYTES_32);
 
 		// ------------------------------------- //
 		// Get Values

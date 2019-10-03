@@ -3,10 +3,6 @@
   "Id": "9461f33d-119a-4020-9836-95846859a6f4",
   "Items": [
     {
-      "Id": "8c185e03-6eeb-4fdc-856d-14947a6d688a",
-      "Command": "-h"
-    },
-    {
       "Id": "37bb34d1-e03c-426c-bf3f-afb0a65f0f20",
       "Command": "--version"
     },
@@ -21,6 +17,10 @@
     {
       "Id": "8ce11758-5996-48f1-8dc8-d24467fb1922",
       "Command": "res/hello.txt"
+    },
+    {
+      "Id": "848c604b-e795-4d8f-be1a-105adb53b979",
+      "Command": "res/test.xlsx"
     },
     {
       "Id": "fdc33380-904e-4c4f-9521-ddcf63d80ce9",

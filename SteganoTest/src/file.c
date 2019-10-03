@@ -5,11 +5,11 @@
 #include "file.h"
 #include "verbose.h"
 
-HEADER_FILE_SIZE_CONTAINER_TYPE_64 GetSizeFileInBytes(FILE* file)
+HEADER_FILE_SIZE_CONTAINER_TYPE_32 GetSizeFileInBytes(FILE* file)
 {
-	const HEADER_FILE_SIZE_CONTAINER_TYPE_64 save_cursor_pos = ftell(file);
+	const HEADER_FILE_SIZE_CONTAINER_TYPE_32 save_cursor_pos = ftell(file);
 	fseek(file, 0L, SEEK_END);
-	const HEADER_FILE_SIZE_CONTAINER_TYPE_64 size = ftell(file);
+	const HEADER_FILE_SIZE_CONTAINER_TYPE_32 size = ftell(file);
 	fseek(file, 0, save_cursor_pos);
 	return size;
 }
