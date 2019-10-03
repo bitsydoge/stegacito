@@ -18,7 +18,7 @@ int encoder_main(struct arg_file * file, struct arg_file * image, struct arg_fil
 
 	// --------------------------------- //
 	// Load File
-	File* my_file = FileLoad(file->filename[0], "r");
+	File* my_file = FileLoad(file->filename[0], "rb+");
 
 	Header my_header = HeaderCreate(my_file->size, file->basename[0]);
 
@@ -48,7 +48,7 @@ int encoder_main(struct arg_file * file, struct arg_file * image, struct arg_fil
 		// Insert in Image Array
 		ImageSetPixelRGB(my_image, i, pixel_encoded);
 	}
-	fseek(my_file->file_handler, 0L, SEEK_SET);
+	//fseek(my_file->file_handler, 0L, SEEK_SET);
 	// --------------------------------- //
 	// Pixel Encoding
 	VERBOSE_ON printf("Pixel Encoding ...\n");
@@ -60,7 +60,9 @@ int encoder_main(struct arg_file * file, struct arg_file * image, struct arg_fil
 
 		// ------------------------------------- //
 		// Get Values
-		const Byte data = fgetc(my_file->file_handler);
+		//const Byte data = fgetc(my_file->file_handler);
+		Byte data = 0; 
+		fread(&data, sizeof(Byte), 1, my_file->file_handler);
 		VERBOSE_ON printf("Original Data = \"%d\"\n", data);
 		const RGB pixel_original = ImageGetPixelRGB(my_image, i);
 		VERBOSE_ON printf("Original Pixel = (%d,%d,%d)\n", pixel_original.r, pixel_original.g, pixel_original.b);

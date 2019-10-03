@@ -11,13 +11,13 @@
     <DebuggerFlavor>WindowsLocalDebugger</DebuggerFlavor>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <LocalDebuggerCommandArguments>-v -e -i stegacito_forest.png</LocalDebuggerCommandArguments>
+    <LocalDebuggerCommandArguments>-e -i stegacito_forest.png</LocalDebuggerCommandArguments>
     <DebuggerFlavor>WindowsLocalDebugger</DebuggerFlavor>
-    <RemoteDebuggerCommandArguments>-v -e -i stegacito_forest.png</RemoteDebuggerCommandArguments>
+    <RemoteDebuggerCommandArguments>-e -i stegacito_forest.png</RemoteDebuggerCommandArguments>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
-    <LocalDebuggerCommandArguments>-v res/test.xlsx -i res/forest.png</LocalDebuggerCommandArguments>
+    <LocalDebuggerCommandArguments>res/test.xlsx -i res/forest.png</LocalDebuggerCommandArguments>
     <DebuggerFlavor>WindowsLocalDebugger</DebuggerFlavor>
-    <RemoteDebuggerCommandArguments>-v res/test.xlsx -i res/forest.png</RemoteDebuggerCommandArguments>
+    <RemoteDebuggerCommandArguments>res/test.xlsx -i res/forest.png</RemoteDebuggerCommandArguments>
   </PropertyGroup>
 </Project>

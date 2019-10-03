@@ -23,13 +23,13 @@ int decoder_main(struct arg_file* image, struct arg_file* output)
 	File* my_file;
 	if(output->count>0)
 	{
-		my_file = FileLoad(output->filename[0], "w+");
+		my_file = FileLoad(output->filename[0], "wb+");
 	}
 	else
 	{
 		char buf[512];
 		snprintf(buf, sizeof buf, "%s%s", "extracted_", &my_header.header[10]);
-		my_file = FileLoad(buf, "w+");
+		my_file = FileLoad(buf, "wb+");
 	}
 
 	for (int i = HEADER_SIZE_IN_BYTES_32*my_image->channels; i < (HEADER_SIZE_IN_BYTES_32 * my_image->channels)+(filesize*my_image->channels); i += my_image->channels)

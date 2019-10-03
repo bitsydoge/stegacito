@@ -3,32 +3,54 @@
   "Id": "9461f33d-119a-4020-9836-95846859a6f4",
   "Items": [
     {
-      "Id": "37bb34d1-e03c-426c-bf3f-afb0a65f0f20",
-      "Command": "--version"
-    },
-    {
-      "Id": "e3908ae2-0170-4d53-a5ee-8a378e6b654f",
-      "Command": "-v"
-    },
-    {
-      "Id": "c2f95149-7ae0-47a5-bd1b-db3f4de06566",
-      "Command": "-e"
-    },
-    {
-      "Id": "8ce11758-5996-48f1-8dc8-d24467fb1922",
-      "Command": "res/hello.txt"
-    },
-    {
-      "Id": "848c604b-e795-4d8f-be1a-105adb53b979",
-      "Command": "res/test.xlsx"
-    },
-    {
-      "Id": "fdc33380-904e-4c4f-9521-ddcf63d80ce9",
-      "Command": "-i stegacito_forest.png"
-    },
-    {
-      "Id": "a4bec1c9-acd0-4bde-a87d-8905d17a8019",
-      "Command": "-i res/forest.png"
+      "Id": "44cd6ea9-7887-4026-bd21-5d203dc58d87",
+      "Command": "",
+      "Items": [
+        {
+          "Id": "99edaf50-d863-41b0-a757-b252792b4efd",
+          "Command": "DecodeTest",
+          "Items": [
+            {
+              "Id": "c2f95149-7ae0-47a5-bd1b-db3f4de06566",
+              "Command": "-e"
+            },
+            {
+              "Id": "fdc33380-904e-4c4f-9521-ddcf63d80ce9",
+              "Command": "-i stegacito_forest.png"
+            }
+          ]
+        },
+        {
+          "Id": "d6161617-3e2e-430c-a9b4-04234d9d4122",
+          "Command": "EncodeTest",
+          "Items": [
+            {
+              "Id": "848c604b-e795-4d8f-be1a-105adb53b979",
+              "Command": "res/test.xlsx"
+            },
+            {
+              "Id": "a4bec1c9-acd0-4bde-a87d-8905d17a8019",
+              "Command": "-i res/forest.png"
+            }
+          ]
+        },
+        {
+          "Id": "c1e4eb84-fabf-4d93-90a0-b5d462a6366c",
+          "Command": "-h"
+        },
+        {
+          "Id": "37bb34d1-e03c-426c-bf3f-afb0a65f0f20",
+          "Command": "--version"
+        },
+        {
+          "Id": "e3908ae2-0170-4d53-a5ee-8a378e6b654f",
+          "Command": "-v"
+        },
+        {
+          "Id": "8ce11758-5996-48f1-8dc8-d24467fb1922",
+          "Command": "res/hello.txt"
+        }
+      ]
     }
   ]
 }
