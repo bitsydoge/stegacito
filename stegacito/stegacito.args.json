@@ -26,7 +26,7 @@
           "Items": [
             {
               "Id": "848c604b-e795-4d8f-be1a-105adb53b979",
-              "Command": "res/test.xlsx"
+              "Command": "res/binarytest.xlsx"
             },
             {
               "Id": "a4bec1c9-acd0-4bde-a87d-8905d17a8019",
@@ -48,7 +48,7 @@
         },
         {
           "Id": "8ce11758-5996-48f1-8dc8-d24467fb1922",
-          "Command": "res/hello.txt"
+          "Command": "res/textfile.txt"
         }
       ]
     }

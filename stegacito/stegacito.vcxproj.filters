@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="src\bitmask.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\common.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\decoder.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\encoder.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\file.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\header.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\image.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\launcher.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\verbose.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\version.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\external\argtable3.c">
+      <Filter>src\external</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\basictype.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\bitmask.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\common.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\decoder.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\encoder.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\errorcode.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\file.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\header.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\image.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\verbose.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\version.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\external\argtable3.h">
+      <Filter>src\external</Filter>
+    </ClInclude>
+    <ClInclude Include="src\external\stb_image_write.h">
+      <Filter>src\external</Filter>
+    </ClInclude>
+    <ClInclude Include="src\external\stb_image.h">
+      <Filter>src\external</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="src">
+      <UniqueIdentifier>{198a3414-01bd-40da-b038-9a9e7f75c84b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\external">
+      <UniqueIdentifier>{d7b7dc86-95c6-4bb1-94d4-c48543603936}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
