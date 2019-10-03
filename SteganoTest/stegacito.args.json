@@ -1,0 +1,34 @@
+{
+  "FileVersion": 2,
+  "Id": "9461f33d-119a-4020-9836-95846859a6f4",
+  "Items": [
+    {
+      "Id": "8c185e03-6eeb-4fdc-856d-14947a6d688a",
+      "Command": "-h"
+    },
+    {
+      "Id": "37bb34d1-e03c-426c-bf3f-afb0a65f0f20",
+      "Command": "--version"
+    },
+    {
+      "Id": "e3908ae2-0170-4d53-a5ee-8a378e6b654f",
+      "Command": "-v"
+    },
+    {
+      "Id": "c2f95149-7ae0-47a5-bd1b-db3f4de06566",
+      "Command": "-e"
+    },
+    {
+      "Id": "8ce11758-5996-48f1-8dc8-d24467fb1922",
+      "Command": "res/hello.txt"
+    },
+    {
+      "Id": "fdc33380-904e-4c4f-9521-ddcf63d80ce9",
+      "Command": "-i stegacito_forest.png"
+    },
+    {
+      "Id": "a4bec1c9-acd0-4bde-a87d-8905d17a8019",
+      "Command": "-i res/forest.png"
+    }
+  ]
+}
