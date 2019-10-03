@@ -58,5 +58,5 @@ void ImageSaveToPNG(Image* img, const char* path)
 {
 	VERBOSE_ON printf("Saving the file : \"%s\" ...\n", path);
 	stbi_write_png(path, img->width, img->height, img->channels, img->pixel_array, img->width * img->channels);
-	VERBOSE_ON printf("File have been saved succefully\n");
+	printf("File \"%s\" have been saved.", path);
 }

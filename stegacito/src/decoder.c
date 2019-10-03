@@ -21,13 +21,13 @@ int decoder_main(struct arg_file* image, struct arg_file* output)
 	// --------------------------------- //
 	// File Opening
 	File* my_file;
+	char buf[512];
 	if(output->count>0)
 	{
 		my_file = FileLoad(output->filename[0], "wb+");
 	}
 	else
 	{
-		char buf[512];
 		snprintf(buf, sizeof buf, "%s%s", "extracted_", &my_header.header[10]);
 		my_file = FileLoad(buf, "wb+");
 	}
@@ -39,6 +39,8 @@ int decoder_main(struct arg_file* image, struct arg_file* output)
 		fwrite(&data_extracted, sizeof(Byte), 1, my_file->file_handler);
 		VERBOSE_ON printf("Pixel %d (%d,%d,%d) : %d \n", (i - HEADER_SIZE_IN_BYTES_32/my_image->channels) / my_image->channels, my_image->pixel_array[i], my_image->pixel_array[i + 1], my_image->pixel_array[i + 2], data_extracted);
 	}
+
+	printf("File \"%s\" have been extracted to \"%s\"", (char*)&my_header.header[10], output->count > 0 ? output->filename[0] : buf);
 
 	//Clean
 	VERBOSE_ON printf("\n");
