@@ -40,8 +40,8 @@ usage: stegacito.exe [-ehv] [<file>] -i <imageFile> [-o <output>] [--version]
   -o, --output=<output>     output file name
   -e, --extract             enable extract mode
   -h, --help                display this help
-  --version                 display version info
-  -v, --verbose             verbose output
+  --version                 display version info and exit
+  -v, --verbose             verbose output and exit
 ```
 
 # External Library
