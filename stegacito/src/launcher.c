@@ -64,13 +64,20 @@ int main(int argc, char* argv[])
 		else
 		{
 			SetVerbose(verbose->count > 0 ? 1 : 0);
-			if (extract->count > 0 && file->count == 0)
-			{
-				decoder_main(image, output);
-			}
-			else if (extract->count == 0 && file->count > 0)
+			if (extract->count == 0 && file->count > 0)
 			{
 				encoder_main(file, image, output);
+			}
+			else if (extract->count == 0 && file->count == 0)
+			{
+				printf("Error, you need to input a <file> if you are not in extract mode [-e]\n");
+				printf("Try '%s --help' for more information.\n", ProgExecName);
+			}
+			if (extract->count > 0)
+			{
+				if(file->count > 0)
+					printf("Warning, you don't need to input a <file> in extract mode [-e]\n");
+				decoder_main(image, output);
 			}
 		}		
 	}

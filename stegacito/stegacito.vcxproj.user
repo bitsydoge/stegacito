@@ -4,7 +4,7 @@
     <ShowAllFiles>false</ShowAllFiles>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <LocalDebuggerCommandArguments>-e -i stegacito_forest.png -v</LocalDebuggerCommandArguments>
-    <RemoteDebuggerCommandArguments>-e -i stegacito_forest.png -v</RemoteDebuggerCommandArguments>
+    <LocalDebuggerCommandArguments>-i res/forest.png -v</LocalDebuggerCommandArguments>
+    <RemoteDebuggerCommandArguments>-i res/forest.png -v</RemoteDebuggerCommandArguments>
   </PropertyGroup>
 </Project>
