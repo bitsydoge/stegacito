@@ -22,19 +22,19 @@ int main(int argc, char* argv[])
 {
 	void* argtable[] =
 	{
-		file =		arg_filen(NULL, NULL, "<file(s)>", 0, 100, "input files"),
-		image =		arg_filen("i", "image", "<myImage>", 1, 1, "image to add files"),
-		output =	arg_filen("o", "output", "<myfilename>", 0, 1, "output file(s) name, if there is multiple it will add a number at the end"),
-		extract =	arg_litn("e", "extract", 0, 1, "extract file(s) from an image"),
-		help =		arg_litn("h", "help", 0, 1, "display this help and exit"),
-		version =	arg_litn(NULL, "version", 0, 1, "display version info and exit"),
-		verbose =	arg_litn("v", "verbose", 0, 1, "verbose output"),
-		end =		arg_end(20),
+		file = arg_filen(NULL, NULL, "<file>", 0, 1, "input file"),
+		image = arg_filen("i", "image", "<imageFile>", 1, 1, "image that contain/will contain file "),
+		output = arg_filen("o", "output", "<output>", 0, 1, "output file name"),
+		extract = arg_litn("e", "extract", 0, 1, "enable extract mode"),
+		help = arg_litn("h", "help", 0, 1, "display this help"),
+		version = arg_litn(NULL, "version", 0, 1, "display version info"),
+		verbose = arg_litn("v", "verbose", 0, 1, "verbose output"),
+		end = arg_end(20),
 	};
 
 	// Parse the ArgTable
 	const int nerrors = arg_parse(argc, argv, argtable);
-
+	
 	if (version->count > 0)
 	{
 		printf("Version : %s\n", GetVersionName());
@@ -71,16 +71,16 @@ int main(int argc, char* argv[])
 	}
 	else
 	{
-		if(nerrors == 0)
+		if (nerrors == 0)
 		{
 			printf("%s: missing option <file(s)>\n", ProgExecName);
 			if (help->count == 0)
 				printf("Try '%s --help' for more information.\n", ProgExecName);
 		}
-			
+
 		exit(ERRORCODE_ARGSERROR);
 	}
-		
+
 	arg_freetable(argtable, sizeof(argtable) / sizeof(argtable[0]));
 	return 0;
 }
