@@ -1,6 +1,6 @@
 ﻿#include "version.h"
 
-unsigned char version_number = 1;
+unsigned char version_number = 2;
 const char * version_name[] =
 {
 	"PREDEV",
