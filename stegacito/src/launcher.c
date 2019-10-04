@@ -27,60 +27,51 @@ int main(int argc, char* argv[])
 		output = arg_filen("o", "output", "<output>", 0, 1, "output file name"),
 		extract = arg_litn("e", "extract", 0, 1, "enable extract mode"),
 		help = arg_litn("h", "help", 0, 1, "display this help"),
-		version = arg_litn(NULL, "version", 0, 1, "display version info"),
-		verbose = arg_litn("v", "verbose", 0, 1, "verbose output"),
+		version = arg_litn(NULL, "version", 0, 1, "display version info and exit"),
+		verbose = arg_litn("v", "verbose", 0, 1, "verbose output and exit"),
 		end = arg_end(20),
 	};
-
 	// Parse the ArgTable
 	const int nerrors = arg_parse(argc, argv, argtable);
-	
-	if (version->count > 0)
+	if(version->count!=0 || help->count!=0)
 	{
-		printf("Version : %s\n", GetVersionName());
-	}
+		// Show Help if needed
+		if (help->count > 0)
+		{
+			printf("usage: %s", ProgExecName);
+			arg_print_syntax(stdout, argtable, "\n\n");
+			arg_print_glossary(stdout, argtable, "  %-25s %s\n");
+			puts("");
+		}
 
-	// Show Help if needed
-	if (help->count > 0)
-	{
-		printf("usage: %s", ProgExecName);
-		arg_print_syntax(stdout, argtable, "\n\n");
-		arg_print_glossary(stdout, argtable, "  %-25s %s\n");
-		puts("");
-	}
-
-	// If the Error the Parser returned
-	if (nerrors > 0)
-	{
-		// Display it
-		arg_print_errors(stdout, end, ProgExecName);
-		if (help->count == 0)
-			printf("Try '%s --help' for more information.\n", ProgExecName);
-	}
-
-	SetVerbose(verbose->count > 0 ? 1 : 0);
-
-	// ------------------------------------------------------------------------ //
-	if (extract->count > 0 && file->count == 0)
-	{
-		decoder_main(image, output);
-	}
-	else if (extract->count == 0 && file->count > 0)
-	{
-		encoder_main(file, image, output);
+		if (version->count > 0)
+		{
+			printf("Version : %s\n", GetVersionName());
+		}
 	}
 	else
 	{
-		if (nerrors == 0)
+		// If the Error the Parser returned
+		if (nerrors > 0)
 		{
-			printf("%s: missing option <file(s)>\n", ProgExecName);
+			// Display it
+			arg_print_errors(stdout, end, ProgExecName);
 			if (help->count == 0)
 				printf("Try '%s --help' for more information.\n", ProgExecName);
 		}
-
-		exit(ERRORCODE_ARGSERROR);
+		else
+		{
+			SetVerbose(verbose->count > 0 ? 1 : 0);
+			if (extract->count > 0 && file->count == 0)
+			{
+				decoder_main(image, output);
+			}
+			else if (extract->count == 0 && file->count > 0)
+			{
+				encoder_main(file, image, output);
+			}
+		}		
 	}
-
 	arg_freetable(argtable, sizeof(argtable) / sizeof(argtable[0]));
 	return 0;
 }
