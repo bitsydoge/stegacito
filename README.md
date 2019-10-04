@@ -43,3 +43,8 @@ usage: stegacito.exe [-ehv] [<file>] -i <imageFile> [-o <output>] [--version]
   --version                 display version info
   -v, --verbose             verbose output
 ```
+
+# External Library
+ - stb_image.h https://github.com/nothings/stb
+ - stb_image_write.h https://github.com/nothings/stb
+ - argtable3 https://github.com/argtable/argtable3
