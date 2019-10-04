@@ -10,11 +10,13 @@
 #include "external/argtable3.h"
 #include "version.h"
 
-// Argument	Type On, Off, Multiple On
+// Argument enabler
 struct arg_lit* verbose, * help, * version, * extract;
 // File lists
 struct arg_file* output, * file, * image;
+// List ending
 struct arg_end* end;
+// Name
 char ProgExecName[] = "stegacito.exe";
 char ProgTitle[] = "Stegacito";
 
