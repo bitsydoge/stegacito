@@ -30,3 +30,16 @@ VE = Byte that contain the version number.
 S1-S4 = Uint32 that is equal to the size of the file, max file = 4go
 N1-N255 = Contain the filename.
 ```
+
+# How To Use 
+```
+usage: stegacito.exe [-ehv] [<file>] -i <imageFile> [-o <output>] [--version]
+
+  <file>                    input file
+  -i, --image=<imageFile>   image that contain/will contain file
+  -o, --output=<output>     output file name
+  -e, --extract             enable extract mode
+  -h, --help                display this help
+  --version                 display version info
+  -v, --verbose             verbose output
+```
