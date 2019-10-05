@@ -56,7 +56,7 @@ int encoder_main(struct arg_file * file, struct arg_file * image, struct arg_fil
 	for (HEADER_FILE_SIZE_CONTAINER_TYPE_32 i = HEADER_SIZE_IN_BYTES_32; i < my_file->size + HEADER_SIZE_IN_BYTES_32; i++)
 	{
 		VERBOSE_ON printf("-------------------\n");
-		VERBOSE_ON printf("Pixel Number : %d\n", i - HEADER_SIZE_IN_BYTES_32);
+		VERBOSE_ON printf("Pixel Number : %u\n", i - HEADER_SIZE_IN_BYTES_32);
 
 		// ------------------------------------- //
 		// Get Values

@@ -29,12 +29,13 @@ File* FileLoad(const char* path, char* mode)
 		exit(2);
 	}
 	my_file->size = GetSizeFileInBytes(my_file->file_handler);
-	VERBOSE_ON printf("File %s have been opened with mode %s and is weight %lld bytes\n", path, mode, my_file->size);
+	VERBOSE_ON printf("File %s have been opened with mode %s and is weight %u bytes\n", path, mode, my_file->size);
 	return my_file;
 }
 
 void FileUnload(File** file_to_delete)
 {
 	fclose((*file_to_delete)->file_handler);
+	free(file_to_delete);
 	file_to_delete == NULL;
 }

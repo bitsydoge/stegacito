@@ -31,7 +31,7 @@ void ImageDestroy(Image** to_destroy)
 {
 	stbi_image_free((*to_destroy)->pixel_array);
 	free(*to_destroy);
-	to_destroy = NULL;
+	*to_destroy = NULL;
 }
 
 RGB ImageGetPixelRGB(Image* img, size_t position)

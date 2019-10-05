@@ -8,8 +8,6 @@
 
 int decoder_main(struct arg_file* image, struct arg_file* output)
 {
-	Bitmask bitmask = GetBitmask();
-
 	// --------------------------------- //
 	// Load Image
 	Image* my_image = ImageLoad(image->filename[0]);
