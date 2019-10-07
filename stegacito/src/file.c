@@ -35,7 +35,14 @@ File* FileLoad(const char* path, char* mode)
 
 void FileUnload(File** file_to_delete)
 {
-	fclose((*file_to_delete)->file_handler);
-	free(file_to_delete);
-	file_to_delete == NULL;
+	if(file_to_delete != NULL && *file_to_delete != NULL)
+	{
+		if ((*file_to_delete)->file_handler != NULL)
+		{
+			fclose((*file_to_delete)->file_handler);
+			(*file_to_delete)->file_handler = NULL;
+		}
+		free(*file_to_delete);
+		*file_to_delete = NULL;
+	}	
 }

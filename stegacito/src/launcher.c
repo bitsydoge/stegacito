@@ -3,7 +3,6 @@
 #define STB_IMAGE_WRITE_IMPLEMENTATION
 #include "external/stb_image_write.h"
 
-#include "errorcode.h"
 #include "decoder.h"
 #include "encoder.h"
 #include "verbose.h"

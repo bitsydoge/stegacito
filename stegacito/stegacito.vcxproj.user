@@ -7,4 +7,8 @@
     <LocalDebuggerCommandArguments>-i res/forest.png -v</LocalDebuggerCommandArguments>
     <RemoteDebuggerCommandArguments>-i res/forest.png -v</RemoteDebuggerCommandArguments>
   </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LocalDebuggerCommandArguments>res/binarytest.xlsx -i res/forest.png</LocalDebuggerCommandArguments>
+    <RemoteDebuggerCommandArguments>res/binarytest.xlsx -i res/forest.png</RemoteDebuggerCommandArguments>
+  </PropertyGroup>
 </Project>
