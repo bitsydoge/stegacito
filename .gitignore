@@ -1,4 +1,13 @@
-
+# BUILD DIR
+bin/
 Builds/
 
+# VISUAL STUDIO & CODE
 .vs/
+
+# CMAKE
+CMakeCache.txt
+cmake_install.cmake
+CMakeFiles/
+
+Makefile
