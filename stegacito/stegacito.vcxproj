@@ -19,33 +19,33 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="src\basictype.h" />
-    <ClInclude Include="src\bitmask.h" />
-    <ClInclude Include="src\common.h" />
-    <ClInclude Include="src\decoder.h" />
-    <ClInclude Include="src\encoder.h" />
-    <ClInclude Include="src\errorcode.h" />
     <ClInclude Include="src\external\argtable3.h" />
     <ClInclude Include="src\external\stb_image.h" />
     <ClInclude Include="src\external\stb_image_write.h" />
-    <ClInclude Include="src\file.h" />
-    <ClInclude Include="src\header.h" />
-    <ClInclude Include="src\image.h" />
-    <ClInclude Include="src\verbose.h" />
-    <ClInclude Include="src\version.h" />
+    <ClInclude Include="src\stg_basictype.h" />
+    <ClInclude Include="src\stg_bitmask.h" />
+    <ClInclude Include="src\stg_common.h" />
+    <ClInclude Include="src\stg_decoder.h" />
+    <ClInclude Include="src\stg_encoder.h" />
+    <ClInclude Include="src\stg_errorcode.h" />
+    <ClInclude Include="src\stg_file.h" />
+    <ClInclude Include="src\stg_header.h" />
+    <ClInclude Include="src\stg_image.h" />
+    <ClInclude Include="src\stg_verbose.h" />
+    <ClInclude Include="src\stg_version.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="src\bitmask.c" />
-    <ClCompile Include="src\common.c" />
-    <ClCompile Include="src\decoder.c" />
-    <ClCompile Include="src\encoder.c" />
     <ClCompile Include="src\external\argtable3.c" />
-    <ClCompile Include="src\file.c" />
-    <ClCompile Include="src\header.c" />
-    <ClCompile Include="src\image.c" />
-    <ClCompile Include="src\launcher.c" />
-    <ClCompile Include="src\verbose.c" />
-    <ClCompile Include="src\version.c" />
+    <ClCompile Include="src\stg_bitmask.c" />
+    <ClCompile Include="src\stg_common.c" />
+    <ClCompile Include="src\stg_decoder.c" />
+    <ClCompile Include="src\stg_encoder.c" />
+    <ClCompile Include="src\stg_file.c" />
+    <ClCompile Include="src\stg_header.c" />
+    <ClCompile Include="src\stg_image.c" />
+    <ClCompile Include="src\stg_launcher.c" />
+    <ClCompile Include="src\stg_verbose.c" />
+    <ClCompile Include="src\stg_version.c" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>

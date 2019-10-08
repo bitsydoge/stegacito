@@ -1,74 +1,41 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <ClCompile Include="src\bitmask.c">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="src\common.c">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="src\decoder.c">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="src\encoder.c">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="src\file.c">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="src\header.c">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="src\image.c">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="src\launcher.c">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="src\verbose.c">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="src\version.c">
-      <Filter>src</Filter>
-    </ClCompile>
     <ClCompile Include="src\external\argtable3.c">
       <Filter>src\external</Filter>
     </ClCompile>
+    <ClCompile Include="src\stg_bitmask.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\stg_common.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\stg_decoder.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\stg_encoder.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\stg_file.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\stg_header.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\stg_image.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\stg_launcher.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\stg_verbose.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\stg_version.c">
+      <Filter>src</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="src\basictype.h">
-      <Filter>src</Filter>
-    </ClInclude>
-    <ClInclude Include="src\bitmask.h">
-      <Filter>src</Filter>
-    </ClInclude>
-    <ClInclude Include="src\common.h">
-      <Filter>src</Filter>
-    </ClInclude>
-    <ClInclude Include="src\decoder.h">
-      <Filter>src</Filter>
-    </ClInclude>
-    <ClInclude Include="src\encoder.h">
-      <Filter>src</Filter>
-    </ClInclude>
-    <ClInclude Include="src\errorcode.h">
-      <Filter>src</Filter>
-    </ClInclude>
-    <ClInclude Include="src\file.h">
-      <Filter>src</Filter>
-    </ClInclude>
-    <ClInclude Include="src\header.h">
-      <Filter>src</Filter>
-    </ClInclude>
-    <ClInclude Include="src\image.h">
-      <Filter>src</Filter>
-    </ClInclude>
-    <ClInclude Include="src\verbose.h">
-      <Filter>src</Filter>
-    </ClInclude>
-    <ClInclude Include="src\version.h">
-      <Filter>src</Filter>
-    </ClInclude>
     <ClInclude Include="src\external\argtable3.h">
       <Filter>src\external</Filter>
     </ClInclude>
@@ -77,6 +44,39 @@
     </ClInclude>
     <ClInclude Include="src\external\stb_image.h">
       <Filter>src\external</Filter>
+    </ClInclude>
+    <ClInclude Include="src\stg_basictype.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\stg_bitmask.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\stg_common.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\stg_decoder.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\stg_encoder.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\stg_errorcode.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\stg_file.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\stg_header.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\stg_image.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\stg_verbose.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\stg_version.h">
+      <Filter>src</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

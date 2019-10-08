@@ -1,5 +1,4 @@
 ﻿#include "stg_basictype.h"
-#include "stg_bitmask.h"
 #include "external/argtable3.h"
 #include "stg_image.h"
 #include "stg_file.h"
