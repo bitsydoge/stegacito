@@ -1,4 +1,6 @@
-﻿int verbose = 0;
+﻿#include "stg_verbose.h"
+
+int verbose = 0;
 
 void SetVerbose(int is_verbose)
 {

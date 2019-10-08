@@ -1,10 +1,10 @@
-﻿#include "basictype.h"
-#include "bitmask.h"
+﻿#include "stg_basictype.h"
+#include "stg_bitmask.h"
 #include "external/argtable3.h"
-#include "image.h"
-#include "file.h"
-#include "common.h"
-#include "verbose.h"
+#include "stg_image.h"
+#include "stg_file.h"
+#include "stg_common.h"
+#include "stg_verbose.h"
 
 int decoder_main(struct arg_file* image, struct arg_file* output)
 {

@@ -1,7 +1,7 @@
 ﻿#ifndef IMAGE_H
 #define IMAGE_H
 
-#include "basictype.h"
+#include "stg_basictype.h"
 #include <stddef.h>
 
 struct Image

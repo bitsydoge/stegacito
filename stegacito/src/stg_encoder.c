@@ -1,14 +1,14 @@
-﻿#include "encoder.h"
+﻿#include "stg_encoder.h"
 
 #include <stdio.h>
 #include <stdlib.h>
 
-#include "verbose.h"
-#include "errorcode.h"
-#include "image.h"
-#include "header.h"
-#include "file.h"
-#include "common.h"
+#include "stg_verbose.h"
+#include "stg_errorcode.h"
+#include "stg_image.h"
+#include "stg_header.h"
+#include "stg_file.h"
+#include "stg_common.h"
 
 int encoder_main(struct arg_file * file, struct arg_file * image, struct arg_file * output)
 {

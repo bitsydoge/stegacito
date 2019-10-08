@@ -3,9 +3,9 @@
 
 #include <stdint.h>
 #include <limits.h>
-#include "basictype.h"
-#include "version.h"
-#include "image.h"
+#include "stg_basictype.h"
+#include "stg_version.h"
+#include "stg_image.h"
 
 // ------------------------------- //
 // Header Constants & Types

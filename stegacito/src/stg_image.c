@@ -1,13 +1,13 @@
-﻿#include "image.h"
+﻿#include "stg_image.h"
 
-#include "header.h"
+#include "stg_header.h"
 
 #include "external/stb_image.h"
 #include "external/stb_image_write.h"
 
 #include <stdlib.h>
-#include "errorcode.h"
-#include "verbose.h"
+#include "stg_errorcode.h"
+#include "stg_verbose.h"
 
 Image* ImageLoad(const char* path_to_file)
 {
@@ -58,5 +58,5 @@ void ImageSaveToPNG(Image* img, const char* path)
 {
 	VERBOSE_ON printf("Saving the file : \"%s\" ...\n", path);
 	stbi_write_png(path, img->width, img->height, img->channels, img->pixel_array, img->width * img->channels);
-	printf("File \"%s\" have been saved.", path);
+	printf("File \"%s\" have been saved.\n", path);
 }

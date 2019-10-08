@@ -1,4 +1,4 @@
-﻿#include "bitmask.h"
+﻿#include "stg_bitmask.h"
 
 Bitmask GetBitmask()
 {

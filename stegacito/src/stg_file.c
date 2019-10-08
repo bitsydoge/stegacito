@@ -1,9 +1,9 @@
 ﻿#include <stdio.h>
 #include <stdlib.h>
 
-#include "header.h"
-#include "file.h"
-#include "verbose.h"
+#include "stg_header.h"
+#include "stg_file.h"
+#include "stg_verbose.h"
 
 HEADER_FILE_SIZE_CONTAINER_TYPE_32 GetSizeFileInBytes(FILE* file)
 {

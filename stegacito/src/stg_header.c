@@ -1,11 +1,11 @@
-﻿#include "header.h"
+﻿#include "stg_header.h"
 #include <stdio.h>
 #include <string.h>
-#include "image.h"
-#include "common.h"
-#include "verbose.h"
+#include "stg_image.h"
+#include "stg_common.h"
+#include "stg_verbose.h"
 #include <stdlib.h>
-#include "errorcode.h"
+#include "stg_errorcode.h"
 
 Header HeaderCreate(HEADER_FILE_SIZE_CONTAINER_TYPE_32 file_size, const char* filename)
 {

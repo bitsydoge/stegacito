@@ -1,4 +1,4 @@
-﻿#include "version.h"
+﻿#include "stg_version.h"
 
 unsigned char version_number = 2;
 const char * version_name[] =

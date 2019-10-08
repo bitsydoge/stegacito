@@ -1,7 +1,7 @@
 ﻿// Pixel = 3 bytes      <--- Data 1 byte
 // |rrrrr000|ggggg111|bbbbbb22|  <-----  data |22111000|
-#include "basictype.h"
-#include "bitmask.h"
+#include "stg_basictype.h"
+#include "stg_bitmask.h"
 
 RGB Encode(const RGB base, const Byte data)
 {

@@ -11,3 +11,7 @@ cmake_install.cmake
 CMakeFiles/
 
 Makefile
+
+stegacito/src/.vscode/c_cpp_properties.json
+
+stegacito/src/.vscode/settings.json

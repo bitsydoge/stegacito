@@ -1,7 +1,7 @@
 ﻿#ifndef FILE_H
 #define FILE_H
 
-#include "header.h"
+#include "stg_header.h"
 #include <stdio.h>
 
 struct File

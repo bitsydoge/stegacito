@@ -1,7 +1,7 @@
 ﻿#ifndef BITMASK_H
 #define BITMASK_H
 
-#include "basictype.h"
+#include "stg_basictype.h"
 
 struct Bitmask
 {

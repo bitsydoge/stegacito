@@ -3,11 +3,11 @@
 #define STB_IMAGE_WRITE_IMPLEMENTATION
 #include "external/stb_image_write.h"
 
-#include "decoder.h"
-#include "encoder.h"
-#include "verbose.h"
+#include "stg_decoder.h"
+#include "stg_encoder.h"
+#include "stg_verbose.h"
 #include "external/argtable3.h"
-#include "version.h"
+#include "stg_version.h"
 
 int main(int argc, char* argv[])
 {
@@ -17,7 +17,7 @@ int main(int argc, char* argv[])
 	// Argument enabler
 	struct arg_lit* verbose, * help, * version, * extract;
 	// File lists
-	struct arg_file* output, * file, * image;
+	struct arg_file * output, * file, * image;
 	// List ending
 	struct arg_end* end;
 
