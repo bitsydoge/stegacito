@@ -13,4 +13,6 @@ file(GLOB_RECURSE SOURCES
 string(REGEX REPLACE "CMakeFiles/[^;]+;?" "" SOURCES "${SOURCES}")
 
 add_executable(stegacito ${SOURCES})
-target_link_libraries(stegacito m)
+
+IF (NOT WIN32)
+	target_link_libraries(stegacito m)
