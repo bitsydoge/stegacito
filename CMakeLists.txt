@@ -16,3 +16,4 @@ add_executable(stegacito ${SOURCES})
 
 IF (NOT WIN32)
 	target_link_libraries(stegacito m)
+ENDIF()

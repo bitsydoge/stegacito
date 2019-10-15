@@ -1,0 +1,29 @@
+name: Build
+
+on: [push]
+
+jobs:
+  unix-build:
+    name: Test on ${{ matrix.os }}
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [ubuntu-latest, macOS-latest]
+    
+    steps:
+    - uses: actions/checkout@v1
+    - name: configure
+      run: cmake .  
+    - name: make
+      run: make
+      
+  win-build:
+    name: Test on windows-latest
+    runs-on: windows-latest
+        
+    steps:
+    - uses: actions/checkout@v1
+    - name: configure
+      run: cmake .  
+    - name: make
+      run: cmake --build . --target ALL_BUILD --config Release -- /nologo /verbosity:minimal /maxcpucount

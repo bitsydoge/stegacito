@@ -1,3 +1,5 @@
+
+[![Actions Status](https://github.com/Coldragon/Stegacito/workflows/Build/badge.svg)](https://github.com/Coldragon/Stegacito/actions)  on Windows, MacOS and Linux
 # Stegacito
 
 Hide a File inside a PNG image. 
