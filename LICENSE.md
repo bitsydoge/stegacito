@@ -1,9 +1,6 @@
-THIS LICENCE DOESN'T APPLY TO FILE INSIDE FOLDER NAMED "external", THEY HAVE 
-THEIR OWN LICENCE AND HAVE NOT BEEN EDITED.
-
 MIT License
 
-Copyright (c) 2019 WARLUS Dylan AKA Coldragon
+Copyright (c) 2020 Coldragon
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal

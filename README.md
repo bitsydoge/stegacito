@@ -1,5 +1,10 @@
 
 [![Actions Status](https://github.com/Coldragon/Stegacito/workflows/Build/badge.svg)](https://github.com/Coldragon/Stegacito/actions)  on Windows, MacOS and Linux
+
+<a href="./LICENSE.md"><img src="https://img.shields.io/badge/license-MIT-brightgreen.svg"></a><br />
+<a href="https://github.com/Coldragon/Stegacito/releases"><img src="https://img.shields.io/github/v/release/coldragon/stegacito.svg"></a><br />
+
+
 # Stegacito
 
 Hide a File inside a PNG image. 
@@ -8,7 +13,7 @@ You can hide in the image image_width x image_height - header_size(265) bytes.
 
 For example a 800x480 image can have **800 x 480 - 265 = 383735 bytes** ----> **383.735** kilobytes
 
-Pixel in the image are alterated, 3 bits in the Red and Green and 2 bits in the Blue. So the Red and Green will varry in a range of 0-7 and the Blue 0-3.
+Pixel in the image are alterated, 3 bits in the Red and Green and 2 bits in the Blue.
 
 # Schema
 
